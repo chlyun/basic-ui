@@ -2,6 +2,32 @@
 
 body {
   font-family: "Noto Sans KR", sans-serif;
+}
+
+/* 헤더 */
+.header{
   background-color: yellow;
+  width : 940px;
+}
+
+/* 비쥬얼 */
+.visual{
+  background-color: pink;
+  inline-size: 940px;
+}
+
+/* 메인 */
+.main{
+  background-color: skyblue;
+}
+
+/* 슬로건 */
+.slogan{
+  background-color: green;
+}
+
+/* 푸터 */
+.footer{
+  background-color: orange;
 }
 
