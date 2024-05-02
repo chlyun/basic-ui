@@ -8,7 +8,7 @@
 .visual,
 .main,
 .slogan,
-.footer{
+.footer-inner{
   width : var(--container-size);
   margin: 0 auto;
 }
@@ -21,26 +21,40 @@ body {
 /* 헤더 */
 .header{
   background-color: yellow;
+  height: 10vh;
 }
 
 /* 비쥬얼 */
 .visual{
   background-color: pink;
+  height: 10vh;
 }
 
 /* 메인 */
 .main{
   background-color: skyblue;
+  height: 60vh;
+  display: flex;
+}
+
+.group{
+  border: 1px solid red;
 }
 
 /* 슬로건 */
 .slogan{
   background-color: green;
+  height: 10vh;
 }
 
 /* 푸터 */
 .footer{
   background-color: orange;
 
+}
+
+.footer-inner{
+  background-color: violet;
+  height: 10vh;
 }
 
