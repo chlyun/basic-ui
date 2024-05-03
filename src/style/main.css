@@ -19,14 +19,22 @@ body {
 
 /* 헤더 */
 .header {
-  background-color: yellow;
-  height: 10vh;
+  background-color: blue;
+  height: 200px;
   padding: 0 50px;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.logo{
+  background-color: orange;
+  position: absolute;
+  
 }
 /* 비주얼 */
 .visual {
   background-color: pink;
   height: 10vh;
+  
 }
 /* 메인 콘텐츠 */
 .main {
