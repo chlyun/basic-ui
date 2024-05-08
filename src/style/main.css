@@ -9,6 +9,7 @@
 
 /* 그라디언트 배경, 배경 이미지 */
 body {
+  margin: 0;
   font-family: "SUIT Variable", sans-serif;
   background-color: #ccc;
   background-image:  url(/images/bg_flower.png), linear-gradient(to bottom, #aaa 0%, #ccc 30%, #eee 50%, #fff 100%);
@@ -43,6 +44,29 @@ body {
 }
 
 /* 비주얼 */
+
+/* 텍스트 링크 모음 */
+.member-service{
+  
+  list-style-type: none;
+  padding-inline-start: 0;
+  margin: 0;
+  text-align: right;
+  font-size: 0.875rem;
+
+  li{
+    
+    display: inline-block;
+
+    a{
+      padding: 8px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+
+
 .visual {
   height: 120px;
   block-size: 120px;
