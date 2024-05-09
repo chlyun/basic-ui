@@ -1,5 +1,6 @@
 @import url(/src/style/theme.css);
-@import url(/style/base.css);
+@import url(/src/style/base.css);
+@import url(/src/style/reset.css);
 
 /* input 컴포넌트 */
 .form-input{
