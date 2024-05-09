@@ -1,4 +1,4 @@
-@import url(/style/theme.css);
+@import url(/src/style/theme.css);
 
 :root{
   --base-font-family: "SUIT Variable", sans-serif; 

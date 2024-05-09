@@ -1,0 +1,61 @@
+@import url(/src/style/theme.css);
+@import url(/src/style/base.css);
+@import url(/src/style/reset.css);
+
+
+.button{
+  border: 0;
+  padding: 4px 8px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+.form-input{
+  --spacing: 10px;
+  --border-color: var(--gray-500);
+  --radius: 3px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  gap: var(--spacing);
+  align-items: center;
+
+  label{
+    white-space: nowrap;
+  }
+
+  input{
+    flex-grow: 1;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 1px 1px 1px 8px;
+    height: 24px;
+    block-size: 24px;
+    width: 100%;
+  }
+}
+
+.search-group{
+  border: 1px solid #aaa;
+  border-bottom: 0;
+  border-radius: 5px 5px 0 0;
+  padding: 12px 24px;
+  background-image: linear-gradient(to bottom, #ccc, #fff);
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+  
+  .form-input{
+    flex-grow: 1;
+  }
+
+  [class*="fab"]{
+    padding-right: 0.25em;
+  }
+
+  button{
+    font-size: 0.825rem;
+  }
+}
