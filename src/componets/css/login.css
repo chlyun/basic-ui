@@ -1,7 +1,38 @@
+@import url(/style/theme.css);
+ 
+/* 기본 글꼴 */
 :root{
-  --base-font-famaily: "SUIT Variable", sans-serif;
+  --base-font-family: "SUIT Variable", sans-serif; 
 }
 
 body{
-  font-family: var(--base-font-famaily);
+  font-family: var(--base-font-family);
+}
+
+.login{
+  width: 500px;
+  inline-size: 500px;
+  background-image: radial-gradient(circle at right top, rgb(0, 255, 200), rgb(0, 113, 128));
+  border-radius: 5px;
+  padding: 12px;
+  box-shadow: 5px 5px 0 0 black;
+}
+
+.login-title{
+  color: yellow;
+  margin: 0;
+  font-size: 0.9375rem;
+}
+
+.login-form{
+  background-color: white;
+  border-radius: 5px 5px 0 0;
+  
+  
+}
+
+.member-sign{
+  margin: 0;
+  background-color: white;
+  border-radius: 0 0 5px 5px ;
 }
