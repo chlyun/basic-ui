@@ -1,6 +1,6 @@
-@import url(/src/style/reset.css);
-@import url(/src/style/theme.css);
-@import url(/src/style/base.css);
+@import url(/style/reset.css);
+@import url(/style/theme.css);
+@import url(/style/base.css);
 
 body{
   margin: 50px;
