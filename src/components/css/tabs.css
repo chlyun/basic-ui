@@ -44,7 +44,7 @@ body, h1{
       justify-content: space-between;
       gap: 0.5rem;
       a{
-      display: flexbox;
+      
       flex-flow: row nowrap;
       gap: 0.5rem;
       flex: 1 1 auto;
