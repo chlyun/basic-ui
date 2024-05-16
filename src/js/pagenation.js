@@ -1,21 +1,20 @@
 // DOM 선택
-const links = document.querySelectorAll('.pageination a');
+const burgerButton = document.querySelector('.burger-button');
+const menu = document.querySelector('.menu');
 
 // 함수 구현
-const handleLinkClick = (event) => {
-    // 기본 동작을 취소합니다.
-    event.preventDefault();
+const handleClick = () => {
+  // 'is-active' 클래스의 존재 여부에 따라 클래스를 추가하거나 제거합니다.
+  if (burgerButton.classList.contains('is-active')) {
+    burgerButton.classList.remove('is-active');
+    burgerButton.setAttribute('aria-label', '메인메뉴 열기');
+    menu.classList.remove('is-active'); // '.menu'에서 'is-active' 클래스를 제거합니다.
+  } else {
+    burgerButton.classList.add('is-active');
+    burgerButton.setAttribute('aria-label', '메인메뉴 닫기');
+    menu.classList.add('is-active'); // '.menu'에 'is-active' 클래스를 추가합니다.
+  }
+};
 
-    // 모든 링크에서 is-selected 클래스를 제거합니다.
-    links.forEach((link) => {
-        link.classList.remove('is-selected');
-    });
-
-    // 클릭된 링크에 is-selected 클래스를 추가합니다.
-    event.target.classList.add('is-selected');
-}
-
-// a 요소에 이벤트를 바인딩
-links.forEach((link) => {
-    link.addEventListener('click', handleLinkClick);
-});
+// 이벤트 바인딩
+burgerButton.addEventListener('click', handleClick);
