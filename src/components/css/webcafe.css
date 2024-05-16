@@ -1,13 +1,6 @@
 @import url(/src/style/reset.css);
 @import url(/src/style/base.css);
-
-
-
-
-/* 웹카페 반응형 레이아웃 */
-body{
-  margin-top: 50px;
-}
+@import url(/src/theory/css/grid.css);
 
 /* 웹카페 반응형 레이아웃 */
 .container{
@@ -30,24 +23,19 @@ body{
     gap: 24px;
   }
 }
-.header{
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: end;
-}
 
 /* 햄버거 버튼 */
 .burger-button{
-  margin: 100px;
-  background: red;
+  background: transparent;
   border: 0;
   padding: 0;
-  width: 100px;
-  height: 100px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
   z-index: 10;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   
   span{
     width: 100%;
@@ -55,47 +43,42 @@ body{
     background-color: #fff;
     border-radius: 20px;
     transition: all 200ms;
+    grid-area: 1 / 1 / 2 / 2;
   }
 
   .burger-bar-top{
+    align-self: start;
   }
   .burger-bar-middle{
+    align-self: center;
   }
   .burger-bar-bottom{
+    align-self: end;
+  }
+
+  /* is-actvie 클래스가 있을 때 */
+  &.is-active{
+    .burger-bar-top, .burger-bar-bottom{
+      align-self: center;
+    }
+  
+    .burger-bar-top{
+      rotate: 45deg;
+    }
+  
+    .burger-bar-middle{
+      translate: -100% 0;
+    }
+  
+    .burger-bar-bottom{
+      rotate: -45deg;
+    }
+  }
+
+  @media (min-width: 768px){
+    display: none;
   }
 }
-
-/* is-actvie 클래스가 있을 때 */
-.burger-button.is-active{
-  overflow: hidden;
-  justify-content: center;
-
-  span{
-
-  }
-
-  .burger-bar-top, .burger-bar-bottom{
-    /* translate: 0 -50%; */
-  }
-
-  .burger-bar-top{
-    translate: 0 100%;
-    rotate: 45deg;
-  }
-
-  .burger-bar-middle{
-    translate: -100% 0;
-  }
-
-  .burger-bar-bottom{
-    translate: 0 -100%;
-    rotate: -45deg;
-  }
-}
-
-
-
-
 
 /* transition - 애니메이션 */
 /* 내비게이션 */
@@ -120,3 +103,19 @@ body{
     background: purple;
   }
 }
+
+/* 로고 */
+.logo{
+  background-color: blue;
+  background-image: image-set(
+    url(/images/webcafe-logo.png) 1x,
+    url(/images/webcafe-logo@2x.png) 2x
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 20%;
+  /* height: 50px; */
+  aspect-ratio: 1/0.28921568627450983;
+}
+
+
